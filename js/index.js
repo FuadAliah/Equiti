@@ -32,18 +32,26 @@ setInterval(function () {
   newYear();
 }, 1000);
 
-var ctx = document.getElementById("myChart").getContext("2d");
-var myChart = new Chart(ctx, {
+let firstPer = document.getElementById("per-one").innerHTML.slice(0, 2);
+let secPer = document.getElementById("per-two").innerHTML.slice(0, 2);
+
+let firstName = (document.getElementById("name-one").style.width =
+  firstPer * 1.5 + "%");
+let secName = (document.getElementById("name-two").style.width =
+  secPer * 1.5 + "%");
+
+const ctx = document.getElementById("myChart").getContext("2d");
+const myChart = new Chart(ctx, {
   type: "line",
   data: {
     labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
     datasets: [
       {
+        label: "",
         data: [12.25, 11.25, 13.75, 5.5],
         borderWidth: 1,
         fill: false,
         borderColor: "#00AFAA",
-        cubicInterpolationMode: "default",
         lineTension: 0,
         pointBorderColor: "transparent",
         pointBackgroundColor: "transparent",
@@ -54,12 +62,19 @@ var myChart = new Chart(ctx, {
     scales: {
       yAxes: [
         {
+          display: false,
           ticks: {
             max: 20,
             min: 0,
             stepSize: 0.25,
             beginAtZero: true,
           },
+        },
+      ],
+      xAxes: [
+        {
+          color: "rgb(255, 255, 255)",
+          stepSize: 0.25,
         },
       ],
     },

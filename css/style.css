@@ -644,6 +644,31 @@ section {
   padding: 0px 20px 0 0;
 }
 
+.section-two .tab-content .oil-tab .news-section .news::-webkit-scrollbar {
+  width: 4px;
+  border-radius: 2px;
+}
+
+.section-two
+  .tab-content
+  .oil-tab
+  .news-section
+  .news::-webkit-scrollbar-track {
+  background: #2c4251;
+  border-radius: 2px;
+  width: 4px;
+}
+
+.section-two
+  .tab-content
+  .oil-tab
+  .news-section
+  .news::-webkit-scrollbar-thumb {
+  background: #1c6971;
+  width: 2px;
+  border-radius: 2px;
+}
+
 .section-two .tab-content .oil-tab .news-section .news .artical {
   border-bottom: 1px solid #4b6476;
 }
@@ -694,6 +719,38 @@ section {
 }
 
 @media (max-width: 768px) {
+  .section-two {
+    height: 1100px;
+  }
+
+  .section-two .custom-top .mob-dropdown {
+    position: absolute;
+    top: 108px;
+    right: 0;
+    z-index: 99;
+  }
+
+  .section-two .custom-top .instrument {
+    width: 100%;
+    height: 90px;
+    background: var(--fg-blue);
+    border-radius: 8px 8px 0 0;
+    line-height: 90px;
+    color: #fff;
+    justify-content: center;
+  }
+
+  .section-two .mob-nav li {
+    width: 100%;
+    background: transparent;
+  }
+
+  .section-two .mob-nav li a {
+    height: 66px;
+    line-height: 56px;
+    color: var(--equiti-teal);
+  }
+
   .section-two .tab-content .oil-tab .graph-section {
     color: var(--white);
     padding: 20px;
@@ -806,6 +863,7 @@ section {
 
   .section-two .tab-content .oil-tab .news-section .news {
     padding: 0px 25px;
+    background: #192a36;
   }
 
   .section-two .tab-content .oil-tab .news-section .news-section-title {
@@ -834,17 +892,6 @@ section {
     margin: 30px 25px;
     position: relative;
     z-index: 2;
-  }
-
-  .section-two .tab-content .oil-tab .news-section .btn-second::before {
-    content: "";
-    background-color: var(--bg-blue);
-    top: -31px;
-    width: 382px;
-    position: absolute;
-    height: 137px;
-    left: -26px;
-    z-index: -1;
   }
 
   .section-two .tab-content .oil-tab .news-section .btn-second .icon {
@@ -911,8 +958,8 @@ section {
   height: 120px;
 }
 
-.section-three .containe .candidates .static .name {
-  width: 82%;
+.section-three .containe .candidates .static .percent-one,
+.section-three .containe .candidates .static .percent-two {
   height: 60px;
   font-size: 22px;
   font-weight: 700;
@@ -923,13 +970,17 @@ section {
 }
 
 .section-three .containe .candidates .static .total {
-  width: 15%;
+  width: 16%;
   font-size: 48px;
   font-weight: 700;
   color: var(--bg-blue);
 }
 
-.section-three .containe .candidates .stats-one .name {
+.section-three .containe .candidates .stats-one #name-one {
+  max-width: 80%;
+}
+
+.section-three .containe .candidates .stats-one .percent-one {
   background: #4f5a94;
 }
 
@@ -947,7 +998,7 @@ section {
   left: 15px;
 }
 
-.section-three .containe .candidates .stats-two .name {
+.section-three .containe .candidates .stats-two .percent-two {
   background: #e1464d;
 }
 
@@ -1085,8 +1136,14 @@ section {
   }
 
   .section-three .containe .candidates .static {
-    width: 100%;
     height: 65px;
+  }
+
+  .section-three .containe .candidates .static .percent-one,
+  .section-three .containe .candidates .static .percent-two {
+    height: 29px;
+    line-height: 25px;
+    padding-left: 0px;
   }
 
   .section-three .containe .candidates .static .name {
@@ -1732,6 +1789,12 @@ section {
 .section-eight .foot .left .rights {
   font-size: 16px;
   font-weight: 400;
+}
+
+.section-eight .foot .right .socials a {
+  height: 20px;
+  display: flex;
+  align-items: flex-end;
 }
 
 @media (max-width: 768px) {

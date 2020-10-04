@@ -76,7 +76,7 @@
     <section class="section-two">
         <div class="position-relative">
             <div class="containe-1496 custom-top">
-                <ul class="nav nav-pills d-flex justify-content-between" id="pills-tab" role="tablist">
+                <ul class="nav nav-pills justify-content-between d-none d-md-flex" id="pills-tab" role="tablist">
                     <li class="nav-item" role="presentation">
                         <a class="nav-link" id="pills-gold-tab" data-toggle="pill" href="#pills-gold" role="tab"
                             aria-controls="pills-gold" aria-selected="true">gold</a>
@@ -98,7 +98,22 @@
                             aria-controls="pills-vix" aria-selected="false">vix</a>
                     </li>
                 </ul>
+                <div class="instrument d-flex d-md-none">
+                    <p class="mb-0">choose your instrument and pick it’s Sentiment</p>
+                </div>
                 <div class="tab-content" id="pills-tabContent">
+                    <div class="mob-dropdown d-flex d-md-none">
+                        <div class="dropdown">
+                            <button class="btn btn-secondary drop align-items-center bg-tranparent dropdown-toggle"
+                                type="button" id="drop" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">sdv
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#pills-gold">gold</a>
+                                <a class="dropdown-item active" href="#pills-oil">oil</a>
+                            </div>
+                        </div>
+                    </div>
                     <div class="tab-pane fade" id="pills-gold" role="tabpanel" aria-labelledby="pills-gold-tab">
                         ...
                     </div>
@@ -223,13 +238,16 @@
 
             <div class="candidates">
                 <div class="static stats-one d-flex justify-content-between align-items-center position-relative">
-                    <span class="name">Joe Biden</span>
-                    <span class="total">52%</span>
+                    <div class="percent-one" id="name-one">
+                        <span class="name">Joe Biden</span>
+                    </div>
+                    <span class="total" id="per-one">52%</span>
                 </div>
                 <div class="static stats-two d-flex justify-content-between align-items-center position-relative">
-                    <span class="name">Donald Trump</span>
-                    <span class="total">48%</span>
-
+                    <div class="percent-two" id="name-two">
+                        <span class="name">Donald Trump</span>
+                    </div>
+                    <span class="total" id="per-two">48%</span>
                 </div>
             </div>
 
@@ -482,10 +500,10 @@
             <div class="right align-items-center d-none d-md-flex">
                 <a href="equiti.com" class="text-decoration-none text-white mr-4">Visit Equiti.com</a>
                 <div class="socials d-flex align-items-center">
-                    <i class="mr-3 d-flex align-items-center"><img src="./assets/facebook.svg" alt=""></i>
-                    <i class="mr-3 d-flex align-items-center"><img src="./assets/Twitter.svg" alt=""></i>
-                    <i class="mr-3 d-flex align-items-center"><img src="./assets/Linkedin.svg" alt=""></i>
-                    <i class="d-flex align-items-center"><img src="./assets/youTube.svg" alt=""></i>
+                    <a href="#" class="mr-3"><img src="./assets/facebook.svg" alt=""></a>
+                    <a href="#" class="mr-3"><img src="./assets/Twitter.svg" alt=""></a>
+                    <a href="#" class="mr-3"><img src="./assets/Linkedin.svg" alt=""></a>
+                    <a href="#"><img src="./assets/youTube.svg" alt=""></a>
                 </div>
             </div>
         </div>
