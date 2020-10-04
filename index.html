@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+<link rel="stylesheet" href="./css/style.css">
+
+<title>Hello, world!</title>
+</head>
+
+<body>
+    <section class="section-one text-center">
+        <div class="part-one">
+            <div class="logo"><img src="./assets/equiti-logo-color.svg" alt=""></div>
+            <h1 class="title">Trade the US Election</h1>
+            <p class="paragraph">Trump and Biden are in a race for the presidency, and the winner <br /> change
+                the future of the world</p>
+            <button type="button" class="btn btn-primar custom-btn">Start Trading</button>
+        </div>
+        <div class="position-relative">
+            <div class="part-two">
+                <div class="containe-1496 d-flex justify-content-between">
+                    <div class="stats left d-flex justify-content-between align-items-center">
+                        <img src="./assets/Group 9705-1.png" alt="">
+                        <div class="data left">
+                            <p class="number m-0">304</p>
+                            <p class="politics m-0">Democrat</p>
+                            <p class="name m-0">Biden</p>
+                        </div>
+                    </div>
+                    <div class="stats right d-flex justify-content-between align-items-center">
+                        <img src="./assets/Group 9705.png" alt="">
+                        <div class="data right">
+                            <p class="number m-0">280</p>
+                            <p class="politics m-0">Republican</p>
+                            <p class="name m-0">Trump</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="part-three">
+                <div class="countdown">
+                    <div class="position-relative">
+                        <p class="countdown-title">Countdown to elections date</p>
+                    </div>
+                    <div class="timer d-flex justify-content-between">
+                        <div class="time d-flex flex-column">
+                            <span class="title">Days</span>
+                            <span class="time count-days">00</span>
+                        </div>
+                        <span class="spi"></span>
+                        <div class="time d-flex flex-column">
+                            <span class="title">Hours</span>
+                            <span class="time count-hours">00</span>
+                        </div>
+                        <span class="spi"></span>
+                        <div class="time d-flex flex-column">
+                            <span class="title">Min</span>
+                            <span class="time count-minutes">00</span>
+                        </div>
+                        <span class="spi"></span>
+                        <div class="time d-flex flex-column">
+                            <span class="title">Sec</span>
+                            <span class="time count-seconds">00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="part-four">
+                <img src="./assets/shutterstock_70868041.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section class="section-two">
+        <div class="position-relative">
+            <div class="containe-1496 custom-top">
+                <ul class="nav nav-pills d-flex justify-content-between" id="pills-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="pills-gold-tab" data-toggle="pill" href="#pills-gold" role="tab"
+                            aria-controls="pills-gold" aria-selected="true">gold</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link active" id="pills-oil-tab" data-toggle="pill" href="#pills-oil" role="tab"
+                            aria-controls="pills-oil" aria-selected="false">oil</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="pills-Eurusd-tab" data-toggle="pill" href="#pills-Eurusd" role="tab"
+                            aria-controls="pills-Eurusd" aria-selected="false">Eurusd</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="pills-Dow-Jones-tab" data-toggle="pill" href="#pills-Dow-Jones"
+                            role="tab" aria-controls="pills-Dow-Jones" aria-selected="false">Dow-Jones</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="pills-vix-tab" data-toggle="pill" href="#pills-vix" role="tab"
+                            aria-controls="pills-vix" aria-selected="false">vix</a>
+                    </li>
+                </ul>
+                <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade" id="pills-gold" role="tabpanel" aria-labelledby="pills-gold-tab">
+                        ...
+                    </div>
+                    <div class="tab-pane fade show active" id="pills-oil" role="tabpanel"
+                        aria-labelledby="pills-oil-tab">
+                        <div class="oil-tab">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-md-8 col-12 graph-section">
+                                        <button type="button" class="btn btn-third d-flex align-items-center p-0">
+                                            <span class="icon text-white">?</span>
+                                            <span class="text text-white">How to?</span>
+                                        </button>
+                                        <div class="graph">
+                                            <canvas id="myChart"></canvas>
+                                        </div>
+                                        <div class="volume">
+                                            <h3 class="volume-title">News Volume:</h3>
+                                            <div class="checks d-flex">
+                                                <div class="group">
+                                                    <input type="checkbox" id="one">
+                                                    <label for="one" class="m-0">Corona virus</label>
+                                                </div>
+                                                <div class="group">
+                                                    <input type="checkbox" id="two">
+                                                    <label for="two" class="m-0">Economy</label>
+                                                </div>
+                                                <div class="group">
+                                                    <input type="checkbox" id="three">
+                                                    <label for="three" class="m-0">Trade</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-12 news-section">
+                                        <h4 class="news-section-title">Topic Related News</h4>
+                                        <div class="news">
+                                            <div class="artical">
+                                                <span class="date">Sep 05</span>
+                                                <h5 class="news-title">Lorem ipsum dolor</h5>
+                                                <p class="content">Lorem ipsum dolor sit amet consectetur adipisicing
+                                                    elit.
+                                                    Even blanditiis magnam doloribus veniam neque</p>
+                                            </div>
+                                            <div class="artical">
+                                                <span class="date">Sep 05</span>
+                                                <h5 class="news-title">Lorem ipsum dolor</h5>
+                                                <p class="content">Lorem ipsum dolor sit amet consectetur adipisicing
+                                                    elit.
+                                                    Even blanditiis magnam doloribus veniam neque</p>
+                                            </div>
+                                            <div class="artical">
+                                                <span class="date">Sep 05</span>
+                                                <h5 class="news-title">Lorem ipsum dolor</h5>
+                                                <p class="content">Lorem ipsum dolor sit amet consectetur adipisicing
+                                                    elit.
+                                                    Even blanditiis magnam doloribus veniam neque</p>
+                                            </div>
+                                            <div class="artical">
+                                                <span class="date">Sep 05</span>
+                                                <h5 class="news-title">Lorem ipsum dolor</h5>
+                                                <p class="content">Lorem ipsum dolor sit amet consectetur adipisicing
+                                                    elit.
+                                                    Even blanditiis magnam doloribus veniam neque</p>
+                                            </div>
+                                            <div class="artical">
+                                                <span class="date">Sep 05</span>
+                                                <h5 class="news-title">Lorem ipsum dolor</h5>
+                                                <p class="content">Lorem ipsum dolor sit amet consectetur adipisicing
+                                                    elit.
+                                                    Even blanditiis magnam doloribus veniam neque</p>
+                                            </div>
+                                            <div class="artical">
+                                                <span class="date">Sep 05</span>
+                                                <h5 class="news-title">Lorem ipsum dolor</h5>
+                                                <p class="content">Lorem ipsum dolor sit amet consectetur adipisicing
+                                                    elit.
+                                                    Even blanditiis magnam doloribus veniam neque</p>
+                                            </div>
+                                            <div class="artical">
+                                                <span class="date">Sep 05</span>
+                                                <h5 class="news-title">Lorem ipsum dolor</h5>
+                                                <p class="content">Lorem ipsum dolor sit amet consectetur adipisicing
+                                                    elit.
+                                                    Even blanditiis magnam doloribus veniam neque</p>
+                                            </div>
+                                        </div>
+                                        <button type="button" class="btn btn-second d-flex">
+                                            <span class="icon"><img src="./assets/Icon-Telegram.svg" alt=""></span>
+                                            <div class="text d-flex flex-column justify-content-between text-left">
+                                                <span class="big">follow us on Telegram</span>
+                                                <span class="small">Stay up to date with related news</span>
+                                            </div>
+                                        </button>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="pills-Eurusd" role="tabpanel" aria-labelledby="pills-Eurusd-tab">...
+                    </div>
+                    <div class="tab-pane fade" id="pills-Dow-Jones" role="tabpanel"
+                        aria-labelledby="pills-Dow-Jones-tab">
+                        ...
+                    </div>
+                    <div class="tab-pane fade" id="pills-vix" role="tabpanel" aria-labelledby="pills-vix-tab">...
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-three">
+        <div class="containe">
+            <span class="title">Who will win the US elections</span>
+            <p class="paragraph d-none d-md-block">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+                nonumy eirmod
+                tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+            </p>
+            <p class="paragraph d-md-none">Lorem ipsum dolor sit amet,</p>
+
+            <div class="candidates">
+                <div class="static stats-one d-flex justify-content-between align-items-center position-relative">
+                    <span class="name">Joe Biden</span>
+                    <span class="total">52%</span>
+                </div>
+                <div class="static stats-two d-flex justify-content-between align-items-center position-relative">
+                    <span class="name">Donald Trump</span>
+                    <span class="total">48%</span>
+
+                </div>
+            </div>
+
+            <div class="vote">
+                <span class="title">What’s your vote?</span>
+                <div class="candidates d-flex justify-content-between">
+                    <div class="one">
+                        <input type="radio" name="joe" id="joe">
+                        <label for="joe">
+                            <p class="side m-0">Democrat</span>
+                            <p class="name m-0 d-none d-md-block">Joe Biden</span>
+                            <p class="name m-0 d-md-none">Biden</span>
+                        </label>
+
+                    </div>
+                    <div class="two">
+                        <input type="radio" name="joe" id="trump">
+                        <label for="trump">
+                            <p class="side m-0">Republican</span>
+                            <p class="name m-0">Trump</span>
+                        </label>
+                    </div>
+
+                </div>
+                <button type="button" class="btn btn-primar">Cast My Vote</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-four">
+        <div class="containe-1800 position-relative">
+            <div class="containe-1496">
+                <div class="row">
+                    <div class="col-md-6 col-12">
+                        <div class="content">
+                            <span class="slogan">Equity research article</span>
+                            <h3 class="title">Lorem ipsum dolor sit amet, consetetur</h3>
+                            <p class="brief">
+                                Diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+                                voluptua. At
+                                vero eos et
+                            </p>
+                            <p class="text">
+                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                                invidunt ut
+                                labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo
+                                duo dolores
+                                et ea rebum. Stet clita kasd gubergren, no sea
+                            </p>
+                            <a href="#" class="link">
+                                <img src="./assets/pdf.svg" alt="">
+                                <span class="download">Download Full PDF File</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-five">
+        <div class="containe-1496">
+            <div class="row">
+                <div class="col-md-5 col-12">
+                </div>
+                <div class="col-md-7 col-12">
+                    <span class="section-title d-none d-md-block">Free Webinar</span>
+                    <div class="content">
+                        <span class="section-title d-block d-md-none">Free Webinar</span>
+                        <p class="title">Sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+                        </p>
+                        <div class="info d-flex align-items-center justify-content-between">
+                            <div class="left d-flex align-items-center">
+                                <img class="d-none d-md-block" src="./assets/calendar.svg" alt="">
+                                <span class="slog">Time:</span>
+                                <span class="time">10:30 Am</span>
+                                <span class="date">Aug 23, 2020</span>
+                            </div>
+                            <div class="right d-flex align-items-center">
+                                <img class="d-none d-md-block" src="./assets/countdown.svg" alt="">
+                                <span class="slog">Duration:</span>
+                                <span class="time">1 hour 30 minutes</span>
+                            </div>
+                        </div>
+                        <p class="brief">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                            tempor
+                            invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
+                            et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+                            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing
+                        </p>
+                        <ul class="list-unstyled">
+                            <li>Lorem ipsum dolor sit amet, consetetur sadipscing elitr</li>
+                            <li>Lorem ipsum dolor sit amet, consetetur sadipscing elitr</li>
+                            <li>Lorem ipsum dolor sit amet, consetetur sadipscing elitr</li>
+                        </ul>
+                        <div class="speaker">
+                            <div class="user d-flex">
+                                <img src="./assets/shanti-final.png" alt="">
+                                <div class="infos">
+                                    <h6 class="slog mb-0">Speaker</h6>
+                                    <h5 class="name mb-0">Mohammad Shanti</h5>
+
+                                    <p class="brief mb-0">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                                        diam
+                                        nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+                                        voluptua.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-primar">Book My Seat</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-six">
+        <div class="containe-1384">
+            <p class="section-title">Trade the US elections with a world leading broker</p>
+            <div class="row">
+                <div class="col-md-3 col-12">
+                    <div class="card d-flex flex-row align-items-center">
+                        <div class="icon">
+                            <img src="./assets/Coin.svg" alt="">
+                        </div>
+                        <div class="info">
+                            <p class="title mb-0">CURRENCIES</p>
+                            <p class="brief mb-0">Over 60+ pairs</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-12">
+                    <div class="card d-flex flex-row align-items-center">
+                        <div class="icon">
+                            <img src="./assets/Investment.svg" alt="">
+                        </div>
+                        <div class="info">
+                            <p class="title mb-0">INDICES</p>
+                            <p class="brief mb-0">Global indices</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-12">
+                    <div class="card d-flex flex-row align-items-center">
+                        <div class="icon">
+                            <img src="./assets/Interest-rate.svg" alt="">
+                        </div>
+                        <div class="info">
+                            <p class="title mb-0">SHARES</p>
+                            <p class="brief mb-0">80+ world’s companies</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-12">
+                    <div class="card d-flex flex-row align-items-center">
+                        <div class="icon">
+                            <img src="./assets/Gold-Ingot.svg" alt="">
+                        </div>
+                        <div class="info">
+                            <p class="title mb-0">COMMODITIES</p>
+                            <p class="brief mb-0">Over 30+ commodities</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-seven">
+        <div class="container-fluid white">
+            <div class="containe-1496">
+                <div class="row">
+                    <div class="data col-12 col-md-5">
+                        <p class="title mb-0">US Elections Podcasts</p>
+                        <p class="brief">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                            tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
+                            accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus
+                            est
+                            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                            diam
+                            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
+                            vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
+                            takimata
+                            sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet</p>
+                    </div>
+                    <div class="player col-12 col-md-7">
+                        <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="no"
+                            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/42083982&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-eight">
+        <section class="section-one text-center">
+            <div class="part-one">
+                <h1 class="title">Trade the opportunity of the US Elections</h1>
+                <p class="paragraph">Trump and Biden are in a race for the presidency, and the winner <br /> change
+                    the future of the world</p>
+                <button type="button" class="btn btn-primar custom-btn">Open Live Account</button>
+            </div>
+            <div class="top position-relative">
+                <div class="part-two">
+                    <div class="containe-1496 d-flex justify-content-between">
+
+                    </div>
+                </div>
+                <div class="part-three">
+                    <div class="countdown">
+                        <div class="position-relative">
+                            <p class="countdown-title">Countdown to elections date</p>
+                        </div>
+                        <div class="timer d-flex justify-content-between">
+                            <div class="time d-flex flex-column">
+                                <span class="title">Days</span>
+                                <span class="time count-days">00</span>
+                            </div>
+                            <span class="spi"></span>
+                            <div class="time d-flex flex-column">
+                                <span class="title">Hours</span>
+                                <span class="time count-hours">00</span>
+                            </div>
+                            <span class="spi"></span>
+                            <div class="time d-flex flex-column">
+                                <span class="title">Min</span>
+                                <span class="time count-minutes">00</span>
+                            </div>
+                            <span class="spi"></span>
+                            <div class="time d-flex flex-column">
+                                <span class="title">Sec</span>
+                                <span class="time count-seconds">00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="part-four">
+                    <img src="./assets/shutterstock_70868041.png" alt="">
+                </div>
+            </div>
+        </section>
+
+        <div class="foot container-fluid d-flex justify-content-between">
+            <div class="left d-flex align-items-center">
+                <div class="logo"><img src="./assets/equiti-logo-color.svg" alt=""></div>
+                <p class="rights mb-0">© 2020 Equiti Global Markets, All Rights Reserved</p>
+            </div>
+            <div class="right align-items-center d-none d-md-flex">
+                <a href="equiti.com" class="text-decoration-none text-white mr-4">Visit Equiti.com</a>
+                <div class="socials d-flex align-items-center">
+                    <i class="mr-3 d-flex align-items-center"><img src="./assets/facebook.svg" alt=""></i>
+                    <i class="mr-3 d-flex align-items-center"><img src="./assets/Twitter.svg" alt=""></i>
+                    <i class="mr-3 d-flex align-items-center"><img src="./assets/Linkedin.svg" alt=""></i>
+                    <i class="d-flex align-items-center"><img src="./assets/youTube.svg" alt=""></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container-fluid">
+            <div class="content">
+                <p>Trust is what you need when trading. We know how important it is to ensure the security and integrity
+                    of all your trading activity and your trust is of utmost value to us. We diligently work to meet the
+                    stringent standards set by the JSC in order to put our client’s best interests at the centre of our
+                    business. <a href="#">Click to learn more.</a>
+                </p>
+                <ul class="list-unstyled">
+                    <li>Margined Forex and CFD trading are leveraged products and can result in losses that exceed
+                        deposits. The value of your contract can fall as well as rise, which could result in receiving
+                        back less than you originally deposited. Please ensure you understand the risks and be sure to
+                        manage your risk exposure effectively. Equiti does not provide any investment advice. </li>
+                    <li>Services displayed on this website are provided by Equiti Group Limited Jordan & Equiti Capital
+                        UK Limited
+                    </li>
+                    <li>Equiti Group Limited Jordan is a registered trading name in Jordan (Registration Number. 50248),
+                        which is authorized and regulated by the Jordan Securities Commission with its company
+                        registered address at Second Floor, Jouba Complex, Suleiman Al Nabulsi St 32, Al-Abdali
+                        Boulevard, Amman.
+                    </li>
+                    <li>Equiti Capital UK Limited (Company No. 07216039) is authorised and regulated by the Financial
+                        Conduct Authority (firm reference no. 528328), with its company registered address at 69 Wilson
+                        Street, London, EC2A 2BB, UK.
+                    </li>
+                    <li>Card transactions are processed by Equiti Capital UK Limited.</li>
+                    <li>EGM Futures DMCC is registered in the United Arab Emirates as a broker & clearing member of
+                        Dubai Gold and Commodities Exchange (DGCX), licensed by Dubai Multi Commodities Centre (DMCC)
+                        under License Number 31573 and Regulated by the Securities & Commodities Authority (SCA) under
+                        License Number 607136.
+                    </li>
+                    <li>The information on this site is not directed at residents of the United States, Belgium, Canada,
+                        Singapore and is not intended for use by any person in any jurisdiction where such use would be
+                        contrary to local law or regulation. Telephone calls and online chat conversations may be
+                        recorded and monitored. Tax treatment depends on the individual circumstances for each client.
+                        Tax law can change or may differ in each jurisdiction.
+                    </li>
+                    <li>Any analysis, opinion, commentary or research-based material on our website is for information
+                        and educational purposes only and is not, in any circumstances, intended to be an offer,
+                        recommendation or solicitation to buy or sell. You should always seek independent advice as to
+                        your suitability to speculate in any related markets and your ability to assume the associated
+                        risks if you are at all unsure.
+                    </li>
+                </ul>
+            </div>
+
+            <div class="links d-flex">
+                <a href="#">Regulations</a>
+                <a href="#">Legal Documentation</a>
+                <a href="#">Terms of Use</a>
+                <a href="#">Risk Warning</a>
+            </div>
+    </footer>
+
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="node_modules/chart.js/dist/Chart.min.js"></script>
+
+    <script src="./js/index.js"></script>
+
+</body>
+
+</html>
