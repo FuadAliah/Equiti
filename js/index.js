@@ -27,20 +27,21 @@ function newYear() {
     seconds.innerHTML = ("0" + s).slice(-2);
   }
 }
-
-let ele = document.getElementsByClassName("custom-link-drop active");
-let dropdown = (document.getElementById("drop").innerHTML = ele[0].innerText);
-
+// -------------------------------------------
+function add() {
+  let ele = document.getElementsByClassName("custom-link-drop active");
+  document.getElementById("drop").innerHTML = ele[0].innerHTML;
+}
+add();
+mobLinkDrop = function () {
+  add();
+  $(".link-drop").parent().toggleClass("hide");
+};
+// -------------------------------------------
 const smallBack = document.getElementsByClassName("smallBack")[0].outerHTML;
 const bigBack = (document.getElementsByClassName(
   "bigBack"
 )[0].innerHTML = smallBack.repeat(95));
-
-let elem = document.getElementsByClassName("link-drop");
-elem.onclick = function () {
-  let vac = (document.getElementsByClassName("desk-drop").innerHTML = dropdown);
-  console.log(vac);
-};
 
 mobDrop = function () {
   $("#pills-tab").toggleClass("hide");
@@ -111,7 +112,6 @@ async function chartIt() {
               fontColor: "rgba(255, 255, 255, 0.5)",
               stepSize: 0.25,
               fontSize: 9,
-
             },
           },
         ],
