@@ -31,6 +31,11 @@ function newYear() {
 let ele = document.getElementsByClassName("custom-link-drop active");
 let dropdown = (document.getElementById("drop").innerHTML = ele[0].innerText);
 
+const smallBack = document.getElementsByClassName("smallBack")[0].outerHTML;
+const bigBack = (document.getElementsByClassName(
+  "bigBack"
+)[0].innerHTML = smallBack.repeat(95));
+
 let elem = document.getElementsByClassName("link-drop");
 elem.onclick = function () {
   let vac = (document.getElementsByClassName("desk-drop").innerHTML = dropdown);
@@ -53,56 +58,77 @@ let firstName = (document.getElementById("name-one").style.width =
 let secName = (document.getElementById("name-two").style.width =
   secPer * 1.5 + "%");
 
-const ctx = document.getElementById("oilChart").getContext("2d");
-const oilChart = new Chart(ctx, {
-  type: "line",
-  data: {
-    labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
-    datasets: [
-      {
-        label: "",
-        data: [12.25, 11.25, 13.75, 5.5],
-        borderWidth: 1,
-        fill: false,
-        borderColor: "#00AFAA",
-        lineTension: 0,
-        pointBorderColor: "transparent",
-        pointBackgroundColor: "transparent",
-      },
-    ],
-  },
-  borderColor: "#fff",
-  options: {
-    legend: {
+const xLabels = [];
+const ytemps = [];
+
+chartIt();
+
+async function chartIt() {
+  await getData();
+  const ctx = document.getElementById("oilChart").getContext("2d");
+  const oilChart = new Chart(ctx, {
+    type: "line",
+    data: {
+      labels: xLabels,
+      datasets: [
+        {
+          data: ytemps,
+          borderWidth: 1,
+          fill: false,
+          borderColor: "#00AFAA",
+          lineTension: 0,
+          pointBorderColor: "transparent",
+          pointBackgroundColor: "transparent",
+        },
+      ],
+    },
+    borderColor: "#fff",
+    options: {
+      legend: {
         display: false,
-    },
-    scales: {
-      yAxes: [
-        {
-          display: false,
-          ticks: {
-            max: 20,
-            min: 0,
-            stepSize: 0.25,
-            beginAtZero: true,
+      },
+      scales: {
+        yAxes: [
+          {
+            gridLines: {
+              zeroLineColor: "rgba(255, 255, 255, 0.25)",
+            },
+            display: false,
+            ticks: {
+              max: 20,
+              min: 0,
+              stepSize: 0.25,
+              beginAtZero: true,
+            },
           },
-        },
-      ],
-      xAxes: [
-        {
-          ticks: {
-            fontColor: "#FFF",
-            stepSize: 0.25,
+        ],
+        xAxes: [
+          {
+            gridLines: {
+              zeroLineColor: "rgba(255, 255, 255, 0.25)",
+            },
+            ticks: {
+              fontColor: "rgba(255, 255, 255, 0.5)",
+              stepSize: 0.25,
+              fontSize: 9,
+
+            },
           },
-        },
-      ],
+        ],
+      },
     },
-  },
-});
+  });
+}
+async function getData() {
+  const response = await fetch("../data/ZonAnn.Ts+dSST.csv");
+  const data = await response.text();
 
-const button = document.querySelector('#button');
-const tooltip = document.querySelector('#tooltip');
-
-Popper.createPopper(button, tooltip, {
-  placement: 'bottom',
-});
+  const table = data.split("\n").slice(1);
+  table.forEach((row) => {
+    const columns = row.split(",");
+    const day = columns[0];
+    xLabels.push(day);
+    const temp = columns[1];
+    ytemps.push(temp);
+  });
+}

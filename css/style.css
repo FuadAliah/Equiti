@@ -486,26 +486,49 @@ section {
 }
 
 .section-two .tab-content .graph-section .graph {
-  margin-top: 45px;
+  margin-top: 70px;
   position: relative;
 }
 
-.section-two .tab-content .graph-section .back::before {
-  content: "";
-  width: 103%;
-  height: 100%;
-  position: absolute;
-  top: 0;
+.section-two .tab-content .graph-section .back .grid-back {
+  position: relative;
+  top: -91px;
   left: 14px;
+  width: 103%;
+  height: 550px;
+}
+
+canvas {
+  position: absolute;
+  z-index: 999;
+}
+
+.section-two .tab-content .graph-section .back .grid-back .bigBack {
+  width: 100%;
+  margin-right: 6px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.section-two .tab-content .graph-section .back .grid-back .bigBack .smallBack {
+  width: 10px;
+  margin-right: 2px;
   background: transparent
     linear-gradient(180deg, #000000 1%, #0a0a12 50%, #000000 100%) 0% 0%
     no-repeat padding-box;
   mix-blend-mode: screen;
+  height: 100%;
 }
 
 .section-two .tab-content .oil-tab .graph-section {
   color: var(--white);
   padding: 40px 35px;
+}
+
+.section-two .tab-content .oil-tab .graph-section .btn-third {
+  z-index: 99999;
+  position: absolute;
 }
 
 .section-two .tab-content .oil-tab .graph-section .btn-third:focus {
@@ -529,9 +552,9 @@ section {
   border-bottom: 1px dashed #fff;
 }
 
-.section-two .tab-content .oil-tab .graph-section .volume {
+/* .section-two .tab-content .oil-tab .graph-section .volume {
   margin-top: 60px;
-}
+} */
 
 .section-two .tab-content .oil-tab .graph-section .volume .checks {
   width: 60%;
@@ -751,7 +774,7 @@ section {
     top: 155px;
     flex-direction: column;
     width: 45%;
-    z-index: 99;
+    z-index: 9999;
     border-radius: 0;
     right: 25px;
   }
@@ -848,6 +871,10 @@ section {
     font-weight: 700;
   }
 
+  .section-two .tab-content .graph-section .back .grid-back {
+    height: 250px;
+  }
+
   .section-two .tab-content .oil-tab .graph-section .btn-third .text {
     font-size: 16px;
   }
@@ -942,11 +969,6 @@ section {
     width: 100%;
   }
 
-  
-  .section-two .tab-content .graph-section .back::before {
-    width: 90%;
-  }
-
   .section-two .tab-content .oil-tab .news-section {
     padding: 0px;
   }
@@ -973,6 +995,11 @@ section {
 
   .section-two .tab-content .oil-tab .news-section .news .artical .content {
     font-size: 14px;
+  }
+
+  .section-two .tab-content .graph-section .back .grid-back {
+    top: -70px;
+    width: 90%;
   }
 
   .section-two .tab-content .oil-tab .news-section .btn-second {
