@@ -27,10 +27,12 @@ function newYear() {
     seconds.innerHTML = ("0" + s).slice(-2);
   }
 }
+
 $(".nav-pills li").on("click", function () {
   $("#drop").text($(this).text());
   $(".link-drop").parent().toggleClass("hide");
 });
+
 const smallBack = document.getElementsByClassName("smallBack")[0].outerHTML;
 const bigBack = (document.getElementsByClassName(
   "bigBack"
