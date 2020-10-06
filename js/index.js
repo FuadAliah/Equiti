@@ -27,17 +27,10 @@ function newYear() {
     seconds.innerHTML = ("0" + s).slice(-2);
   }
 }
-// -------------------------------------------
-function add() {
-  let ele = document.getElementsByClassName("custom-link-drop active");
-  document.getElementById("drop").innerHTML = ele[0].innerHTML;
-}
-add();
-mobLinkDrop = function () {
-  add();
+$(".nav-pills li").on("click", function () {
+  $("#drop").text($(this).text());
   $(".link-drop").parent().toggleClass("hide");
-};
-// -------------------------------------------
+});
 const smallBack = document.getElementsByClassName("smallBack")[0].outerHTML;
 const bigBack = (document.getElementsByClassName(
   "bigBack"
