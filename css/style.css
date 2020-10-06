@@ -485,6 +485,24 @@ section {
   background-color: var(--bg-blue);
 }
 
+.section-two .tab-content .graph-section .graph {
+  margin-top: 45px;
+  position: relative;
+}
+
+.section-two .tab-content .graph-section .back::before {
+  content: "";
+  width: 103%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 14px;
+  background: transparent
+    linear-gradient(180deg, #000000 1%, #0a0a12 50%, #000000 100%) 0% 0%
+    no-repeat padding-box;
+  mix-blend-mode: screen;
+}
+
 .section-two .tab-content .oil-tab .graph-section {
   color: var(--white);
   padding: 40px 35px;
@@ -723,11 +741,78 @@ section {
     height: 1100px;
   }
 
+  .section-two .custom-top .desk-drop.hide {
+    display: none;
+  }
+
+  .section-two .custom-top .desk-drop {
+    display: flex;
+    position: absolute;
+    top: 155px;
+    flex-direction: column;
+    width: 45%;
+    z-index: 99;
+    border-radius: 0;
+    right: 25px;
+  }
+
+  .section-two .custom-top .desk-drop li {
+    width: 100%;
+    border-radius: 0;
+    border-right: 0;
+    border-bottom: 1px solid var(--bg-blue);
+  }
+
+  .section-two .custom-top .desk-drop li:first-child a.active {
+    border-radius: 6px 6px 0 0;
+  }
+
+  .section-two .custom-top .desk-drop li:last-child a.active {
+    border-radius: 0 0 6px 6px;
+  }
+
+  .section-two .custom-top .desk-drop li:first-child {
+    border-radius: 6px 6px 0 0;
+  }
+
+  .section-two .custom-top .desk-drop li:last-child {
+    border-radius: 0 0 6px 6px;
+    border-bottom: 0;
+  }
+
+  .section-two .custom-top .desk-drop li a {
+    height: 60px;
+    line-height: 50px;
+    font-size: 18px;
+  }
+
   .section-two .custom-top .mob-dropdown {
     position: absolute;
-    top: 108px;
-    right: 0;
+    top: 103px;
+    right: 15px;
     z-index: 99;
+  }
+
+  .section-two .custom-top .mob-dropdown .drop {
+    background: transparent;
+    border: 0;
+    width: 194px;
+    font-size: 20px;
+    display: flex;
+    justify-content: flex-end;
+    box-shadow: none;
+    color: var(--equiti-teal);
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+
+  .section-two .custom-top .mob-dropdown .drop.dropdown-toggle::after {
+    margin-left: 0.5em;
+  }
+
+  .section-two .custom-top .mob-dropdown .drop:focus {
+    outline: 0;
+    box-shadow: none;
   }
 
   .section-two .custom-top .instrument {
@@ -855,6 +940,11 @@ section {
 
   .section-two .tab-content .oil-tab .graph-section .volume .checks {
     width: 100%;
+  }
+
+  
+  .section-two .tab-content .graph-section .back::before {
+    width: 90%;
   }
 
   .section-two .tab-content .oil-tab .news-section {

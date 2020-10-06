@@ -28,6 +28,19 @@ function newYear() {
   }
 }
 
+let ele = document.getElementsByClassName("custom-link-drop active");
+let dropdown = (document.getElementById("drop").innerHTML = ele[0].innerText);
+
+let elem = document.getElementsByClassName("link-drop");
+elem.onclick = function () {
+  let vac = (document.getElementsByClassName("desk-drop").innerHTML = dropdown);
+  console.log(vac);
+};
+
+mobDrop = function () {
+  $("#pills-tab").toggleClass("hide");
+};
+
 setInterval(function () {
   newYear();
 }, 1000);
@@ -40,8 +53,8 @@ let firstName = (document.getElementById("name-one").style.width =
 let secName = (document.getElementById("name-two").style.width =
   secPer * 1.5 + "%");
 
-const ctx = document.getElementById("myChart").getContext("2d");
-const myChart = new Chart(ctx, {
+const ctx = document.getElementById("oilChart").getContext("2d");
+const oilChart = new Chart(ctx, {
   type: "line",
   data: {
     labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
@@ -58,7 +71,11 @@ const myChart = new Chart(ctx, {
       },
     ],
   },
+  borderColor: "#fff",
   options: {
+    legend: {
+        display: false,
+    },
     scales: {
       yAxes: [
         {
@@ -73,10 +90,19 @@ const myChart = new Chart(ctx, {
       ],
       xAxes: [
         {
-          color: "rgb(255, 255, 255)",
-          stepSize: 0.25,
+          ticks: {
+            fontColor: "#FFF",
+            stepSize: 0.25,
+          },
         },
       ],
     },
   },
+});
+
+const button = document.querySelector('#button');
+const tooltip = document.querySelector('#tooltip');
+
+Popper.createPopper(button, tooltip, {
+  placement: 'bottom',
 });

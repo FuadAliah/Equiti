@@ -76,26 +76,28 @@
     <section class="section-two">
         <div class="position-relative">
             <div class="containe-1496 custom-top">
-                <ul class="nav nav-pills justify-content-between d-none d-md-flex" id="pills-tab" role="tablist">
-                    <li class="nav-item" role="presentation">
-                        <a class="nav-link" id="pills-gold-tab" data-toggle="pill" href="#pills-gold" role="tab"
-                            aria-controls="pills-gold" aria-selected="true">gold</a>
+                <ul class="nav nav-pills justify-content-between desk-drop hide" id="pills-tab" role="tablist">
+                    <li class="nav-item link-drop" role="presentation">
+                        <a class="nav-link custom-link-drop" id="pills-gold-tab" data-toggle="pill" href="#pills-gold"
+                            role="tab" aria-controls="pills-gold" aria-selected="true">gold</a>
+                    </li>
+                    <li class="nav-item link-drop" role="presentation">
+                        <a class="nav-link custom-link-drop active" id="pills-oil-tab" data-toggle="pill"
+                            href="#pills-oil" role="tab" aria-controls="pills-oil" aria-selected="false">oil</a>
                     </li>
                     <li class="nav-item" role="presentation">
-                        <a class="nav-link active" id="pills-oil-tab" data-toggle="pill" href="#pills-oil" role="tab"
-                            aria-controls="pills-oil" aria-selected="false">oil</a>
+                        <a class="nav-link custom-link-drop" id="pills-Eurusd-tab" data-toggle="pill"
+                            href="#pills-Eurusd" role="tab" aria-controls="pills-Eurusd"
+                            aria-selected="false">Eurusd</a>
                     </li>
                     <li class="nav-item" role="presentation">
-                        <a class="nav-link" id="pills-Eurusd-tab" data-toggle="pill" href="#pills-Eurusd" role="tab"
-                            aria-controls="pills-Eurusd" aria-selected="false">Eurusd</a>
+                        <a class="nav-link custom-link-drop" id="pills-Dow-Jones-tab" data-toggle="pill"
+                            href="#pills-Dow-Jones" role="tab" aria-controls="pills-Dow-Jones"
+                            aria-selected="false">Dow-Jones</a>
                     </li>
                     <li class="nav-item" role="presentation">
-                        <a class="nav-link" id="pills-Dow-Jones-tab" data-toggle="pill" href="#pills-Dow-Jones"
-                            role="tab" aria-controls="pills-Dow-Jones" aria-selected="false">Dow-Jones</a>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <a class="nav-link" id="pills-vix-tab" data-toggle="pill" href="#pills-vix" role="tab"
-                            aria-controls="pills-vix" aria-selected="false">vix</a>
+                        <a class="nav-link custom-link-drop" id="pills-vix-tab" data-toggle="pill" href="#pills-vix"
+                            role="tab" aria-controls="pills-vix" aria-selected="false">vix</a>
                     </li>
                 </ul>
                 <div class="instrument d-flex d-md-none">
@@ -105,20 +107,13 @@
                     <div class="mob-dropdown d-flex d-md-none">
                         <div class="dropdown">
                             <button class="btn btn-secondary drop align-items-center bg-tranparent dropdown-toggle"
-                                type="button" id="drop" data-toggle="dropdown" aria-haspopup="true"
-                                aria-expanded="false">sdv
+                                type="button" onclick="mobDrop()" id="drop" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
                             </button>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#pills-gold">gold</a>
-                                <a class="dropdown-item active" href="#pills-oil">oil</a>
-                            </div>
+
                         </div>
                     </div>
                     <div class="tab-pane fade" id="pills-gold" role="tabpanel" aria-labelledby="pills-gold-tab">
-                        ...
-                    </div>
-                    <div class="tab-pane fade show active" id="pills-oil" role="tabpanel"
-                        aria-labelledby="pills-oil-tab">
                         <div class="oil-tab">
                             <div class="container-fluid">
                                 <div class="row">
@@ -128,7 +123,7 @@
                                             <span class="text text-white">How to?</span>
                                         </button>
                                         <div class="graph">
-                                            <canvas id="myChart"></canvas>
+                                            <canvas id="goldChart"></canvas>
                                         </div>
                                         <div class="volume">
                                             <h3 class="volume-title">News Volume:</h3>
@@ -144,6 +139,103 @@
                                                 <div class="group">
                                                     <input type="checkbox" id="three">
                                                     <label for="three" class="m-0">Trade</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-12 news-section">
+                                        <h4 class="news-section-title">Topic Related News</h4>
+                                        <div class="news">
+                                            <div class="artical">
+                                                <span class="date">Sep 05</span>
+                                                <h5 class="news-title">Lorem ipsum dolor</h5>
+                                                <p class="content">Lorem ipsum dolor sit amet consectetur adipisicing
+                                                    elit.
+                                                    Even blanditiis magnam doloribus veniam neque</p>
+                                            </div>
+                                            <div class="artical">
+                                                <span class="date">Sep 05</span>
+                                                <h5 class="news-title">Lorem ipsum dolor</h5>
+                                                <p class="content">Lorem ipsum dolor sit amet consectetur adipisicing
+                                                    elit.
+                                                    Even blanditiis magnam doloribus veniam neque</p>
+                                            </div>
+                                            <div class="artical">
+                                                <span class="date">Sep 05</span>
+                                                <h5 class="news-title">Lorem ipsum dolor</h5>
+                                                <p class="content">Lorem ipsum dolor sit amet consectetur adipisicing
+                                                    elit.
+                                                    Even blanditiis magnam doloribus veniam neque</p>
+                                            </div>
+                                            <div class="artical">
+                                                <span class="date">Sep 05</span>
+                                                <h5 class="news-title">Lorem ipsum dolor</h5>
+                                                <p class="content">Lorem ipsum dolor sit amet consectetur adipisicing
+                                                    elit.
+                                                    Even blanditiis magnam doloribus veniam neque</p>
+                                            </div>
+                                            <div class="artical">
+                                                <span class="date">Sep 05</span>
+                                                <h5 class="news-title">Lorem ipsum dolor</h5>
+                                                <p class="content">Lorem ipsum dolor sit amet consectetur adipisicing
+                                                    elit.
+                                                    Even blanditiis magnam doloribus veniam neque</p>
+                                            </div>
+                                            <div class="artical">
+                                                <span class="date">Sep 05</span>
+                                                <h5 class="news-title">Lorem ipsum dolor</h5>
+                                                <p class="content">Lorem ipsum dolor sit amet consectetur adipisicing
+                                                    elit.
+                                                    Even blanditiis magnam doloribus veniam neque</p>
+                                            </div>
+                                            <div class="artical">
+                                                <span class="date">Sep 05</span>
+                                                <h5 class="news-title">Lorem ipsum dolor</h5>
+                                                <p class="content">Lorem ipsum dolor sit amet consectetur adipisicing
+                                                    elit.
+                                                    Even blanditiis magnam doloribus veniam neque</p>
+                                            </div>
+                                        </div>
+                                        <button type="button" class="btn btn-second d-flex">
+                                            <span class="icon"><img src="./assets/Icon-Telegram.svg" alt=""></span>
+                                            <div class="text d-flex flex-column justify-content-between text-left">
+                                                <span class="big">follow us on Telegram</span>
+                                                <span class="small">Stay up to date with related news</span>
+                                            </div>
+                                        </button>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade show active" id="pills-oil" role="tabpanel"
+                        aria-labelledby="pills-oil-tab">
+                        <div class="oil-tab">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-md-8 col-12 graph-section">
+                                        <button type="button" class="btn btn-third d-flex align-items-center p-0">
+                                            <span class="icon text-white">?</span>
+                                            <span class="text text-white">How to?</span>
+                                        </button>
+                                        <div class="graph back">
+                                            <canvas id="oilChart"></canvas>
+                                        </div>
+                                        <div class="volume">
+                                            <h3 class="volume-title">News Volume:</h3>
+                                            <div class="checks d-flex">
+                                                <div class="group">
+                                                    <input type="checkbox" id="one-oil">
+                                                    <label for="one-oil" class="m-0">Corona virus</label>
+                                                </div>
+                                                <div class="group">
+                                                    <input type="checkbox" id="two-oil">
+                                                    <label for="two-oil" class="m-0">Economy</label>
+                                                </div>
+                                                <div class="group">
+                                                    <input type="checkbox" id="three-oil">
+                                                    <label for="three-oil" class="m-0">Trade</label>
                                                 </div>
                                             </div>
                                         </div>
@@ -564,10 +656,9 @@
     </footer>
 
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>
     <script src="node_modules/chart.js/dist/Chart.min.js"></script>
-
     <script src="./js/index.js"></script>
 
 </body>
