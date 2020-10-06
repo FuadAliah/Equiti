@@ -33,6 +33,20 @@ $(".nav-pills li").on("click", function () {
   $(".link-drop").parent().toggleClass("hide");
 });
 
+const submit = document.getElementById("submit");
+submit.onclick = function () {
+  const choices = document.querySelectorAll('input[name="choices"]');
+  let selectedValue;
+
+  for (let choice of choices) {
+    if (choice.checked) {
+      selectedValue = choice.getAttribute("data-user");
+      break;
+    }
+  }
+  alert(selectedValue.charAt(0).toUpperCase() + selectedValue.slice(1));
+};
+
 const smallBack = document.getElementsByClassName("smallBack")[0].outerHTML;
 const bigBack = (document.getElementsByClassName(
   "bigBack"

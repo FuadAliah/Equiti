@@ -347,12 +347,12 @@
                 </div>
             </div>
 
-            <div class="vote">
+            <form class="vote">
                 <span class="title">What’s your vote?</span>
                 <div class="candidates d-flex justify-content-between">
                     <div class="one">
-                        <input type="radio" name="joe" id="joe">
-                        <label for="joe">
+                        <input type="radio" name="choices" id="biden" data-user="joe biden">
+                        <label for="biden">
                             <p class="side m-0">Democrat</span>
                             <p class="name m-0 d-none d-md-block">Joe Biden</span>
                             <p class="name m-0 d-md-none">Biden</span>
@@ -360,7 +360,7 @@
 
                     </div>
                     <div class="two">
-                        <input type="radio" name="joe" id="trump">
+                        <input type="radio" name="choices" id="trump" data-user="donald trump">
                         <label for="trump">
                             <p class="side m-0">Republican</span>
                             <p class="name m-0">Trump</span>
@@ -368,8 +368,8 @@
                     </div>
 
                 </div>
-                <button type="button" class="btn btn-primar">Cast My Vote</button>
-            </div>
+                <button type="button" id="submit" class="btn btn-primar">Cast My Vote</button>
+            </form>
         </div>
     </section>
 
