@@ -2,7 +2,7 @@
 
 ## Installation Packages
 
-You need to install packages by terminal, run below comand: 
+You need to install packages, run below comand: 
 ```
 npm install
 ```
