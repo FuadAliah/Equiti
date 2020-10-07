@@ -1,6 +1,6 @@
 const countDate = new Date("Nov 3, 2020 12:23:45").getTime();
 
-function newYear() {
+const newYear = () => {
   let now = new Date().getTime();
   let gap = countDate - now;
 

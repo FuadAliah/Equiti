@@ -1,7 +1,6 @@
 {
   "name": "equiti",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "dependencies": {
     "@popperjs/core": "^2.5.3",
@@ -15,5 +14,15 @@
     "test": "mocha"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FuadAliah/Equiti.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/FuadAliah/Equiti/issues"
+  },
+  "homepage": "https://github.com/FuadAliah/Equiti#readme",
+  "description": ""
 }
