@@ -1977,7 +1977,7 @@ footer .content ul li {
 
 footer .links {
   margin: 50px auto;
-  width: 60%;
+  justify-content: center;
 }
 
 footer .links a {
